@@ -15,6 +15,18 @@ function generatePassword() {
   }
 }
 
+// Prompt for character types
+var includeLowercase = confirm('Include lowercase characters?');
+var includeUppercase = confirm('Include uppercase characters?');
+var includeSpecial = confirm('Include special characters?');
+var includeNumeric = confirm('Include numeric characters?');
+
+// Validate at least one character type is selected
+if (!includeLowercase && !includeUppercase && !includeNumeric && !includeSpecial) {
+  alert('You must select at least one character type. Please try again.');
+  return;
+}
+
 // Adding event listener to generate button
 var generateBtn = document.querySelector("#generate");
 generateBtn.addEventListener('click', function () {
