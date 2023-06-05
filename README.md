@@ -11,9 +11,13 @@ At least 1 character type should be selected when all prompts are answered and a
 
 ## Deployed website URL
 
+https://kalidnadere.github.io/Password-Generator-JS/
+
 
 
 ## Deployed site screenshot
+
+![Screenshot password generator](https://github.com/KalidNadere/Password-Generator-JS/assets/131591052/da4f542d-c63d-4bf9-a382-6064ad85af69
 
 
 
