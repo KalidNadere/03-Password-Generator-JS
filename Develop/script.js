@@ -13,7 +13,6 @@ function generatePassword() {
     alert('Invalid password length. Please try again.');
     return;
   }
-}
 
 // Prompt for character types
 var includeLowercase = confirm('Include lowercase characters?');
@@ -22,11 +21,42 @@ var includeSpecial = confirm('Include special characters?');
 var includeNumeric = confirm('Include numeric characters?');
 
 // Validate at least one character type is selected
-if (!includeLowercase && !includeUppercase && !includeNumeric && !includeSpecial) {
+if (!includeLowercase || !includeUppercase || !includeNumeric || !includeSpecial) {
   alert('You must select at least one character type. Please try again.');
   return;
 }
 
+// Define character pools based on selected criteria
+var lowercaseChars = 'abcdefghijklmnopqrstuvwxyz';
+var uppercaseChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+var specialChars = '?<>!@#$%^&*()_-=+';
+var numericChars = '0123456789';
+
+// Build character pool based on selected criteria
+var charPool = '';
+if (lowercaseChars) {
+  charPool += lowercaseChars;
+}
+if (uppercaseChars) {
+  charPool += uppercaseChars;
+}
+if (specialChars) {
+  charPool += specialChars;
+}
+if (numericChars) {
+  charPool += numericChars;
+}
+
+// Generate password generated
+var password = '';
+for (var i = 0; i < length; i++) {
+  var randomIndex = getRandomInt(0, charPool.length - 1);
+  password += charPool.charAt(randomIndex);
+}
+
+// Return password generated
+return password;
+}
 // Adding event listener to generate button
 var generateBtn = document.querySelector("#generate");
 generateBtn.addEventListener('click', function () {
