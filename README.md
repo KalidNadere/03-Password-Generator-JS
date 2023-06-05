@@ -15,8 +15,6 @@ At least 1 character type should be selected when all prompts are answered and a
 
 ## Deployed site screenshot
 
-![Screenshot 2023-06-05 at 11 50 26 am](https://github.com/KalidNadere/Password-Generator-JS/assets/131591052/83d20442-2c3c-4144-ba32-411a05ab0780)
-
 
 
 ## License
