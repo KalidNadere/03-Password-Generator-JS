@@ -21,7 +21,7 @@ var includeSpecial = confirm('Include special characters?');
 var includeNumeric = confirm('Include numeric characters?');
 
 // Validate at least one character type is selected
-if (!includeLowercase || !includeUppercase || !includeNumeric || !includeSpecial) {
+if (!includeLowercase && !includeUppercase && !includeNumeric && !includeSpecial) {
   alert('You must select at least one character type. Please try again.');
   return;
 }
@@ -34,16 +34,16 @@ var numericChars = '0123456789';
 
 // Build character pool based on selected criteria
 var charPool = '';
-if (lowercaseChars) {
+if (includeLowercase) {
   charPool += lowercaseChars;
 }
-if (uppercaseChars) {
+if (includeUppercase) {
   charPool += uppercaseChars;
 }
-if (specialChars) {
+if (includeSpecial) {
   charPool += specialChars;
 }
-if (numericChars) {
+if (includeNumeric) {
   charPool += numericChars;
 }
 
@@ -68,4 +68,4 @@ generateBtn.addEventListener('click', function () {
   if (password) {
   passwordText.value = password;
   }
-})
+});
