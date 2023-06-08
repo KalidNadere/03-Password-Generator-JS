@@ -17,6 +17,7 @@ https://kalidnadere.github.io/Password-Generator-JS/
 
 ## Deployed site screenshot
 
+![Screenshot deployed webpage](https://github.com/KalidNadere/Password-Generator-JS/assets/131591052/0b7fd223-357f-4e71-a534-751176ba885d)
 
 
 
